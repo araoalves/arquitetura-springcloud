@@ -1,11 +1,9 @@
 server:
   port: 8888
 spring:
-  profiles:
-    active: native
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/araoalves/arquitetura-springcloud/blob/main/profiles
+          uri: https://github.com/araoalves/config-repo
           search-paths: fornecedor

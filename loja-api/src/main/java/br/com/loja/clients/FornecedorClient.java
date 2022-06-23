@@ -11,6 +11,6 @@ import java.util.UUID;
 @FeignClient(name = "fornecedor")
 public interface FornecedorClient {
 
-    @RequestMapping(value = "fornecedor/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Fornecedor findById(@PathVariable("id") UUID id);
 }
