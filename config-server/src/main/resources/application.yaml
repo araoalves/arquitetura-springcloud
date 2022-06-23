@@ -6,4 +6,4 @@ spring:
       server:
         git:
           uri: https://github.com/araoalves/config-repo
-          search-paths: fornecedor
+          search-paths: fornecedor, authentication

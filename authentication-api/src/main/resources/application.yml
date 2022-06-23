@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+spring:
+  cloud:
+    config:
+      import-check:
+        enabled: false
+
+template_api:
+   app:
+     jwtSecret: bezKoderSecretKey
+     jwtExpirationMs: 86400000

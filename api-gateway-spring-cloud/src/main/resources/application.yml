@@ -16,6 +16,10 @@ spring:
           uri: lb://LOJA
           predicates:
             - Path=/loja/**
+        - id: authentication
+          uri: lb://AUTHENTICATION
+          predicates:
+            - Path=/authentication/**
 eureka:
   client:
     register-with-eureka: true
