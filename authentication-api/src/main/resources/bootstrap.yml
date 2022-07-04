@@ -2,7 +2,7 @@ spring:
   application:
     name: authentication
   profiles:
-    active: dev
+    active: prod
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://config-server:8888
