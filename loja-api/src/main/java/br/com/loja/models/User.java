@@ -1,8 +1,7 @@
-package br.com.fornecedor.models;
+package br.com.loja.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;

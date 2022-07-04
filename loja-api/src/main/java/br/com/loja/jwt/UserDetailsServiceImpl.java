@@ -1,7 +1,7 @@
-package br.com.fornecedor.jwt;
+package br.com.loja.jwt;
 
-import br.com.fornecedor.clients.AuthenticationClient;
-import br.com.fornecedor.models.User;
+import br.com.loja.clients.AuthenticationClient;
+import br.com.loja.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
