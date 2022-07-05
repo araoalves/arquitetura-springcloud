@@ -19,13 +19,10 @@ public class ApiConfiguration {
 	
 	@Bean
 	InitializingBean sendDatabase() {
-
-		UUID uuid = UUID.randomUUID();
-
 	    return () -> {
-	    	roleRepository.save(new Role(uuid,ERole.ROLE_ADMIN));
-	    	roleRepository.save(new Role(uuid,ERole.ROLE_MODERATOR));
-	    	roleRepository.save(new Role(uuid,ERole.ROLE_USER));
+	    	roleRepository.save(new Role(UUID.fromString("7bb333d0-0baa-483c-a2f8-0a17129e3e75"),ERole.ROLE_ADMIN));
+	    	roleRepository.save(new Role(UUID.fromString("47f3a552-6c2b-4f35-853d-ea003f70bdf4"),ERole.ROLE_MODERATOR));
+	    	roleRepository.save(new Role(UUID.fromString("abb76def-c9b7-446c-bc8a-e6f40454ef65"),ERole.ROLE_USER));
 	      };
 	 }
 	
