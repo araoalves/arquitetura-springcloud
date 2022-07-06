@@ -5,35 +5,36 @@ services:
     container_name: authentication-api
     build:
       context: .
-    depends_on:
-      - docker-postgres
-      - config-server
-      - eureka-server
-      - api-gateway
+    # depends_on:
+    #   - docker-postgres
+    #   - config-server
+    #   - eureka-server
+    #   - api-gateway
     ports: 
-      - 8082:8082
+      - 8082:8082/tcp
+    network_mode: host
 
 
-  docker-postgres:
-    image: postgres:13
-    environment:
-      - POSTGRES_DB=authentication
-      - POSTGRES_USER=authentication
-      - POSTGRES_PASSWORD=authentication
-    ports:
-      - 6543:6543/tcp
+  # docker-postgres:
+  #   image: postgres:13
+  #   environment:
+  #     - POSTGRES_DB=authentication
+  #     - POSTGRES_USER=authentication
+  #     - POSTGRES_PASSWORD=authentication
+  #   ports:
+  #     - 6543:6543/tcp
 
-  config-server:
-    image: afarias/config-server:1.0
-    ports:
-      - 8888:8888/tcp
+  # config-server:
+  #   image: afarias/config-server:1.0
+  #   ports:
+  #     - 8888:8888/tcp
 
-  eureka-server:
-    image: afarias/eureka-server:1.0
-    ports:
-      - 8761:8761/tcp
+  # eureka-server:
+  #   image: afarias/eureka-server:1.0
+  #   ports:
+  #     - 8761:8761/tcp
 
-  api-gateway:
-    image: afarias/api-gateway:1.0
-    ports:
-      - 5556:5556/tcp
+  # api-gateway:
+  #   image: afarias/api-gateway:1.0
+  #   ports:
+  #     - 5556:5556/tcp
