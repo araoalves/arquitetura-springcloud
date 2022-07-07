@@ -20,10 +20,6 @@ spring:
           uri: lb://AUTHENTICATION
           predicates:
             - Path=/authentication/**
-        - id: eureka-server
-          uri: lb://EUREKA-SERVER
-          predicates:
-            - Path=/eureka-server/**
 eureka:
   client:
     register-with-eureka: true
