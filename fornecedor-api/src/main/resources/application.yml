@@ -13,3 +13,14 @@ spring:
     config:
       import-check:
         enabled: false
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+fornecedor:
+  bocker:
+    exchange:
+      fornecedorEventExchang: fornecedor.fornecedorevent

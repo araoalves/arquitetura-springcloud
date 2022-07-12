@@ -6,4 +6,5 @@ import lombok.Data;
 public class ItensDTO {
     private String descricao;
     private Integer quantidade;
+    private Double valor;
 }

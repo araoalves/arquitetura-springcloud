@@ -2,6 +2,7 @@ package br.com.fornecedor.controllers;
 
 import br.com.fornecedor.business.FornecedorBO;
 import br.com.fornecedor.models.Fornecedor;
+import br.com.fornecedor.publishers.FornecedorEventPublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +18,15 @@ public class FornecedorController {
     @Autowired
     private FornecedorBO fornecedorBO;
 
+    @Autowired
+    private FornecedorEventPublisher fornecedorEventPublisher;
+
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public ResponseEntity<?> create(@RequestBody Fornecedor fornecedor) throws Exception {
         try {
-            return new ResponseEntity<>(fornecedorBO.save(fornecedor), HttpStatus.CREATED);
+            Fornecedor fornecedorCreat = fornecedorBO.save(fornecedor);
+            fornecedorEventPublisher.publishFornecedorEvent(fornecedorCreat);
+            return new ResponseEntity<>(fornecedorCreat, HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
         }

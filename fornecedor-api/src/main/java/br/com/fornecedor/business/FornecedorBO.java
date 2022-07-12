@@ -13,7 +13,7 @@ public class FornecedorBO {
     @Autowired
     private FornecedorRepository fornecedorRepository;
 
-    public Object save(Fornecedor fornecedor) {
+    public Fornecedor save(Fornecedor fornecedor) {
         return fornecedorRepository.save(fornecedor);
     }
 

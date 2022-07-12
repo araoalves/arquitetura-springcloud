@@ -1,5 +1,6 @@
 package br.com.loja.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.HashSet;
@@ -21,8 +22,10 @@ public class User {
 
 	private String email;
 
+	@JsonIgnore
 	private String password;
 
+	@JsonIgnore
 	private Set<Role> roles = new HashSet<>();
 	
 	public User(String nome, String telefone, String username, String email, String password) {
