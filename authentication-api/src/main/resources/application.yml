@@ -18,3 +18,8 @@ template_api:
    app:
      jwtSecret: bezKoderSecretKey
      jwtExpirationMs: 86400000
+
+authentication:
+  bocker:
+    exchange:
+      authenticationEventExchang: authentication.authenticationevent

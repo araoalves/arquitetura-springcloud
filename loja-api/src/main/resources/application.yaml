@@ -15,3 +15,11 @@ fornecedor:
     queue:
       fornecedorEventQueue:
         name: fornecedor.fornecedorevent.ms.loja
+
+authentication:
+  bocker:
+    exchange:
+      authenticationEventExchang: authentication.authenticationevent
+    queue:
+      authenticationEventQueue:
+        name: authentication.authenticationevent.ms.loja

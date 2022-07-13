@@ -24,3 +24,11 @@ fornecedor:
   bocker:
     exchange:
       fornecedorEventExchang: fornecedor.fornecedorevent
+
+authentication:
+  bocker:
+    exchange:
+      authenticationEventExchang: authentication.authenticationevent
+    queue:
+      authenticationEventQueue:
+        name: authentication.authenticationevent.ms.fornecedor
